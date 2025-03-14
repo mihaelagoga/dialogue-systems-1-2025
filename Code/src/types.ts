@@ -5,6 +5,7 @@ import { AnyActorRef } from "xstate";
 export interface DMContext {
   spstRef: AnyActorRef;
   lastResult: Hypothesis[] | null;
+  
   meetingPartnerName: string | null |undefined;
   meetingDay: string | null | undefined;      
   meetingTime: string | null | undefined;      

@@ -11,7 +11,7 @@ export interface DMContext {
   meetingTime: string | null | undefined;      
   isWholeDay: boolean | null ;        
   confirmationDecision: string| null| undefined;
- 
+  nluResult:any
   
 }
 

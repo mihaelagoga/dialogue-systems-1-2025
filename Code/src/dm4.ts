@@ -321,12 +321,12 @@ const dmMachine = setup({
           on: { SPEAK_COMPLETE: "GetConfirmation" },
         },
         AppointmentCreated: {
-          entry: { type: "spst.speak", params: { utterance: "Great! Your appointment has been created." } },
+          entry: { type: "spst.speak", params: { utterance: "Great! Your appointment has been created.Goodbye" } },
           on: { SPEAK_COMPLETE: "#DM.Greeting" },
         },
         AppointmentCanceled: {
           entry: [
-              { type: "spst.speak", params: { utterance: "Okay,ypur appointment has been canceled. Let's start over." } },
+              { type: "spst.speak", params: { utterance: "Okay,your appointment has been canceled. Let's start over." } },
               "clearContext"
           ],
           on: { SPEAK_COMPLETE: "#DM.Greeting" },
@@ -369,7 +369,7 @@ const dmMachine = setup({
              entry: { 
                type: "spst.speak",
               
-               params:  ({ context }: { context: DMContext }) => ({ utterance:  `I didn't catch a name in "${context.lastResult ?? 'your last response'}". Which famous person would you like to know about?`})
+               params:  ({ }: { context: DMContext }) => ({ utterance:  `I didn't catch that. Which famous person would you like to know about?`})
              },
              on: { SPEAK_COMPLETE: "GetWho" }, 
           }, 

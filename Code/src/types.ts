@@ -9,10 +9,11 @@ export interface DMContext {
   meetingPartnerName: string | null |undefined;
   meetingDay: string | null | undefined;      
   meetingTime: string | null | undefined;      
-  isWholeDay: boolean | null ;        
-  confirmationDecision: string| null| undefined;
+  isWholeDay: boolean | null ;    
+  famousPersonName: string|  null | undefined;
+ 
   nluResult:any
-  
+
 }
 
 export type DMEvents = SpeechStateExternalEvent | { type: "CLICK" };
